@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesfam - Sistema de Gestão</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-container" id="loginScreen">
+        <div class="login-box">
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Gesfam Logo" class="logo">
+                <h1>Gesfam</h1>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="login-btn" id="loginBtn">
+                    <span>Entrar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            <div class="login-footer">
+                <p>Não tem uma conta? <a href="#" id="registerLink">Registre-se</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="app-container" id="appContainer">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/logo.svg" alt="Gesfam Logo" class="logo">
+                <h2>Gesfam</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a class="menu-item active" data-section="dashboard" href="#dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a class="menu-item" data-section="kanban" href="#kanban">
+                    <i class="fas fa-columns"></i>
+                    <span>Kanban</span>
+                </a>
+                <a class="menu-item" data-section="charts" href="#charts">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Gráficos</span>
+                </a>
+                <a class="menu-item" data-section="actions" href="#actions">
+                    <i class="fas fa-tasks"></i>
+                    <span>Ações</span>
+                </a>
+                <a class="menu-item" data-section="settings" href="#settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+            </nav>
+            <div class="user-profile">
+                <div class="profile-image">
+                    <img src="https://ui-avatars.com/api/?name=Usuário" alt="User" id="userAvatar">
+                </div>
+                <div class="profile-info">
+                    <span id="userName">Usuário</span>
+                    <span id="userRole">Administrador</span>
+                </div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section class="content-section active" id="dashboardSection">
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Kanban Section -->
+            <section class="content-section" id="kanbanSection">
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Charts Section -->
+            <section class="content-section" id="chartsSection">
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Actions Section -->
+            <section class="content-section" id="actionsSection">
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Settings Section -->
+            <section class="content-section" id="settingsSection">
+                <!-- Content will be loaded dynamically -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Action Modal -->
+    <div class="modal" id="actionModal">
+        <!-- Content will be loaded dynamically -->
+    </div>
+
+    <!-- Member Modal -->
+    <div class="modal" id="memberModal">
+        <!-- Content will be loaded dynamically -->
+    </div>
+
+    <!-- Axis Modal -->
+    <div class="modal" id="axisModal">
+        <!-- Content will be loaded dynamically -->
+    </div>
+
+    <!-- Notification System -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/tasks.js"></script>
+    <script src="assets/js/members.js"></script>
+    <script src="assets/js/axes.js"></script>
+</body>
+</html>
